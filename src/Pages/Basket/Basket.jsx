@@ -1,11 +1,12 @@
 import './Basket.css';
 import { useEffect, useState } from 'react';
+import Header from '../../Components/Header/Header';
 
 function Basket(){
 
     console.log()
 
-    const [ food, setFood ] = useState([])
+    const [ food, setFood ] = useState()
 
     const increaseCart = productID => {
         console.log(productID)
@@ -69,6 +70,8 @@ function Basket(){
 
     return(
         <>
+
+            < Header/>
             <h1>Basket</h1>
 
             <div className="basket_product">

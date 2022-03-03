@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import Header from '../../Components/Header/Header';
 import './Restauran.css';
 
 function Restauran(){
@@ -8,9 +9,9 @@ function Restauran(){
 
     let { catagoryID} = useParams()
 
-    const [ state, setState ] = useState([])
+    const [ state, setState ] = useState()
     const [ limit, setLimit ] = useState(catagoryID)
-    const [ restauran, setRestauran ] = useState([])
+    const [ restauran, setRestauran ] = useState()
 
     useEffect(() => {
         fetch('https://restauran-3.herokuapp.com/api/')
@@ -33,8 +34,9 @@ function Restauran(){
 
     return(
         <>
-            <h1>Restauran</h1>
+            < Header/>
 
+            <h1>Restauran</h1>
             
                 <select onChange={handleChange} name="catagory" id="catagory">
 

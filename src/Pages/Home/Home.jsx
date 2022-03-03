@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 function Home(){
 
     const [ state, setState ] = useState([])
-    const [ limit, setLimit ] = useState()
 
     useEffect(() => {
         fetch('https://restauran-3.herokuapp.com/api/')

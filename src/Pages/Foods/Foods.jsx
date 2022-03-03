@@ -1,6 +1,7 @@
 import './Foods.css';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import Header from '../../Components/Header/Header';
 
 function Foods(){
 
@@ -8,7 +9,7 @@ function Foods(){
     console.log(restauranID)
 
     const [ limit, setLimit ] = useState(restauranID)
-    const [ food, setFood ] = useState([])
+    const [ food, setFood ] = useState()
 
 
     useEffect(() => {
@@ -38,6 +39,8 @@ function Foods(){
     return(
 
         <>
+            < Header/>
+
             <h1>Foods</h1>
 
             <ul>
